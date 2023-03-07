@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="jumbotron p-3" style="display: flex; justify-content:space-between">
-        <h2>Users</h2>
+        <h2>Orders</h2>
         <h6><?php echo $_SESSION['username']; ?> <br> <?php echo $_SESSION['email']; ?></h6>
     </div>
     <hr>
