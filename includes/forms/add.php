@@ -40,38 +40,39 @@ if (isset($_POST['postbtn'])) {
         </script>";
         }
     }
-} elseif (isset($_POST['commentbtn'])) {
+} elseif (isset($_GET['tid'])) {
 
-    $user_id = $_SESSION['user_id'];
-    $post_id = $_POST['postid'];
-    $message = $_POST['message'];
-    $select = mysqli_query($con, "SELECT * FROM posts WHERE message = '$message' And user_id = '$user_id'");
+    $user_id = $_SESSION['email'];
+    $tid = $_GET['tid'];
+    $message = "Pending...";
+    $select = mysqli_query($con, "SELECT * FROM orders WHERE trackid = '$tid' And orderedby = '$user_id'");
     $selectrows = mysqli_num_rows($select);
     if ($selectrows >= 1) {
-        $msg = "Comment already Exists!";
+        $msg = "Order already Exists!";
         $uploadOk = 0;
         echo "<script type='text/javascript'>
         alert('$msg');
-        window.location = '../../frontend/templates/comments.php?pid=$post_id';
+        window.location = '../../frontend/templates/home.php';
     </script>";
     } else {
 
-        $query = mysqli_query($con, "INSERT INTO comments(post_id, user_id, message) VALUES('$post_id', '$user_id', '$message')");
+        $query = mysqli_query($con, "INSERT INTO orders(orderedby,trackid,status) VALUES('$user_id', '$tid','$message')");
         if ($query == true) {
 
-            $msg = "Comment added successfully!";
+            $msg = "Track ordered successfully!";
             $uploadOk = 1;
             echo "<script type='text/javascript'>
             alert('$msg');
-            window.location = '../../frontend/templates/comments.php?pid=$post_id';
+            window.location = '../../frontend/templates/home.php';
         </script>";
+
         } else {
 
-            $msg = "An error ocuured! File is too large.";
+            $msg = "An error ocuured!info is too large.";
             $uploadOk = 0;
             echo "<script type='text/javascript'>
             alert('$msg');
-            window.location = '../../frontend/templates/comments.php?pid=$post_id';
+            window.location = '../../frontend/templates/home.php';
         </script>";
         }
     }

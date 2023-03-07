@@ -13,15 +13,16 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">profile</th>
+                <th scope="col">Track Id</th>
+                <th scope="col">Track name</th>
+                <th scope="col">Ordered By</th>
+                <th scope="col">Status</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
         </thead>
         <?php
-        $query = mysqli_query($con, "SELECT * FROM users");
+        $query = mysqli_query($con, "SELECT * FROM orders");
         $count = 1;
         while ($row = mysqli_fetch_array($query)) {
         ?>
@@ -29,9 +30,21 @@
                 <tr>
                     <form action="../../includes/forms/edit.php" method="post">
                         <td scope="row"><?php echo $count; ?></td>
-                        <td><input type="text" name="username" value="<?php echo $row['username']; ?>"></td>
-                        <td><input type="text" name="email" value="<?php echo $row['email'] ?>"></td>
-                        <td><img src="../../includes/forms/img/<?php echo $row['profile']; ?>" width="45" height="45" alt=""></td>
+                        <td><input type="text" name="id" value="<?php echo $row['id']; ?>"></td>
+                        <?php
+                        $query1 = mysqli_query($con, "SELECT * FROM tracks where id = '".$row['trackid']."'");
+                        while ($row1 = mysqli_fetch_array($query1)) {
+                        ?>
+                        <td><?php echo $row1['name']; ?></td>
+                        <?php } ?>
+                        <td><?php echo $row['orderedby'] ?></td>
+                        <td>
+                            <select name="status" id="">
+                                <option class="bg-warning" value="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option>
+                                <option value="Approve">Approve</option>
+                                <option value="Decline">Decline</option>
+                            </select>
+                        </td>
                         <td>
                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                             <button class="btn btn-warning" type="submit" name="edituser">Edit</button>
@@ -45,7 +58,7 @@
                     </td>
                 </tr>
             </tbody>
-        <?php } ?>
+        <?php $count++; } ?>
     </table>
 
 </div>

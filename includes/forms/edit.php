@@ -17,13 +17,13 @@ if(isset($_POST['edituser'])){
 
 if(isset($_POST['editpost'])){
     
-    $title = $_POST['title'];
-    $message = $_POST['message'];
+    $title = $_POST['name'];
+    $message = $_POST['descr'];
     $file = $_FILES['file']['name'];
-    $pid = $_POST['pid'];
-    $ext = pathinfo($file, PATHINFO_EXTENSION);
+    $pid = $_POST['id'];
+    $status = $_POST['status'];
 
-        $query = mysqli_query($con, "UPDATE posts SET title = '$title', message = '$message', file ='$file', file_ext = '$ext' WHERE id = '$pid'");
+        $query = mysqli_query($con, "UPDATE tracks SET name = '$title', descr = '$message', status='$status' file ='$file'WHERE id = '$pid'");
         $target = "img/" . basename($file);
         move_uploaded_file($_FILES['file']['tmp_name'], $target);
         if ($query == true) {

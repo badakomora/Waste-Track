@@ -60,32 +60,35 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
+    <title>Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
 
+<nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-white shadow sticky-top">
+    <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management  System</b></a>
+</nav>
+
     <div class="vh-100 d-flex justify-content-center align-items-center" id="SignIn">
         <div class="col-md-5 p-5 shadow-sm">
-            <h2 class="text-center mb-4 text-primary">Sign In Form</h2>
+            <h2 class="mb-4 text-dark">Admin Signin</h2>
             <form action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control border border-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control border border-dark" id="exampleInputPassword1">
                 </div>
-                <!-- <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p> -->
+                <!-- <p class="small"><a class="text-dark" href="forget-password.html">Forgot password?</a></p> -->
                 <div class="d-grid">
-                    <button class="btn btn-primary" name="login" type="submit">Sign In</button>
+                    <button class="btn btn-dark" name="login" type="submit">Sign In</button>
                 </div>
             </form>
             <div class="mt-3">
-                <!-- <p class="mb-0  text-center">Don't have an account? <a href="#SignUp" class="text-primary fw-bold" >Sign
-                        Up</a></p> -->
+                <p class="mb-0  text-center"><a href="../frontend/" class="text-dark fw-bold" >Go back</a></p>
             </div>
         </div>
     </div>
@@ -93,27 +96,27 @@ if (isset($_POST['login'])) {
 
     <!-- <div class="vh-100 d-flex justify-content-center align-items-center" id="SignUp">
         <div class="col-md-5 p-5 shadow-sm  bg-white">
-            <h2 class="text-center mb-4 text-primary">Sign Up Form</h2>
+            <h2 class="text-center mb-4 text-dark">Sign Up Form</h2>
             <form method="Post" action="">
             <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Username</label>
-                    <input type="username" name="username" class="form-control border border-primary" id="exampleInputPassword1">
+                    <input type="username" name="username" class="form-control border border-dark" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control border border-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control border border-dark" id="exampleInputPassword1">
                 </div>
-                <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p>
+                <p class="small"><a class="text-dark" href="forget-password.html">Forgot password?</a></p>
                 <div class="d-grid">
-                    <button class="btn btn-primary" name="Register" type="submit">Sign Up</button>
+                    <button class="btn btn-dark" name="Register" type="submit">Sign Up</button>
                 </div>
             </form>
             <div class="mt-3">
-                <p class="mb-0  text-center">Already have an account? <a href="#SignIn" class="text-primary fw-bold">Sign
+                <p class="mb-0  text-center">Already have an account? <a href="#SignIn" class="text-dark fw-bold">Sign
                         In</a></p>
             </div>
         </div>

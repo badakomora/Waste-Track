@@ -14,16 +14,15 @@ header("refresh: 0, ../");
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
 </head>
 <body>
 
-<nav class="navbar navbar-secondary bg-secondary">
-    <a href="#" class="navbar-brand text-white" style="font-family:'Dancing Script';font-size: 30px;"><b>Waste Track</b></a>
+<nav class="navbar navbar-expand-lg  navbar-light bg-white shadow d-flex justify-content-between sticky-top">
+    <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management  System</b></a>
     <form class="form-inline">
         <div class="input-group mt-3"> 
-            <p><a class="text-white m-3" href="">My Orders</a></p>
-            <p><a class="text-white m-3" href="../../includes/logout.php">Log Out</a></p>
+            <p><a class="text-dark m-3 " href="orders.php">My Orders</a></p>
+            <p><a class="text-dark m-3" href="../../includes/logout.php">Log Out</a></p>
         </div>
     </form>
 </nav>
@@ -34,54 +33,34 @@ header("refresh: 0, ../");
 
 <div class="row mt-3">
    
-  
+<?php
+include '../../includes/dbconfiq.php';
+  $query = mysqli_query($con, "SELECT * FROM tracks");
+  while ($row = mysqli_fetch_array($query)) {
+?>
+
   <div class="col-4">
   <div class="card">
-      <img class="card-img-top" src="http://cdn.justauto.com.au/ad-assets%2FJHFD4039486%2FJHFD4039486-1.jpg" alt="Bologna">
+      <img class="card-img-top" src="<?php echo $row['file']?>" alt="Bologna">
       <div class="card-body">
-        <h4 class="card-title">Track 1</h4>
-        <h6 class="card-subtitle mb-2">Lorem ipsum 1</h6>
-        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam? </p>
-        <a href="#" class="btn btn-warning">Read More</a>
-        <a href="#" class="btn btn-primary">Order Track</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-success">Ready to order</small>
+        <h4 class="card-title"><?php echo $row['name']?></h4>
+        <h6 class="card-subtitle mb-2">Track Id: #111<?php echo $row['id']?></h6>
+        <p class="card-text"><?php echo $row['descr']?> </p>
+        
+        <?php 
+          $query1 = mysqli_query($con, "SELECT * FROM orders where trackid = '".$row['id']."'");
+          if(mysqli_num_rows($query1) >= 1){
+          while($row1 = mysqli_fetch_array($query1)){?>
+                <a href="#" class="btn btn-warning" style="cursor:no-drop;">Track Busy</a>
+                <?php }}else{?>
+                <a href="../../includes/forms/add.php?tid=<?php echo $row['id'];?>" class="btn btn-primary">Order Track</a>
+       <?php }?>
+        
       </div>
     </div>
   </div>
 
-  <div class="col-4">
-  <div class="card">
-      <img class="card-img-top" src="https://www.waringa.com.au/wp-content/uploads/elementor/thumbs/Elmers-Haulmaster-Adjustable-Auger-scaled-phjhc4a6g0t4ze54mrwfxkh4s39k5gr27syerp5j8g.jpg" alt="Bologna">
-      <div class="card-body">
-        <h4 class="card-title">Track 2</h4>
-        <h6 class="card-subtitle mb-2">Lorem ipsum 2</h6>
-        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam? </p>
-        <a href="#" class="btn btn-warning">Read More</a>
-        <a href="#" class="btn btn-danger">Track ordered</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-danger">Ordered</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-4">
-  <div class="card">
-      <img class="card-img-top" src="https://oconnorscaseih.com.au/wp-content/uploads/41T-Chaser-Bin-Unloading-1024x576-1-e1644273023967.jpg" alt="Bologna">
-      <div class="card-body">
-        <h4 class="card-title">Track 3</h4>
-        <h6 class="card-subtitle mb-2">Lorem Ipsum 3</h6>
-        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?</p>
-        <a href="#" class="btn btn-warning">Read More</a>
-        <a href="#" class="btn btn-primary">Order Track</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-success">Ready to order</small>
-      </div>
-    </div>
-  </div>
+  <?php }?>
     
     
 </div>

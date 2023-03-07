@@ -67,22 +67,59 @@ if (isset($_POST['login'])) {
 
 <body>
 
+<nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-white shadow sticky-top">
+    <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management  System</b></a>
+    <p> <a href="../backend/index.php" class="text-dark fw-bold">Admin here</a></p>
+</nav>
+
 <div class="container justify-content-center row m-5 p-5">
-    <div class="col-lg-6" id="SignIn">
+    
+
+
+    <div class="col-lg-6">
         <div class="bg-white">
-            <h4 class="text-center mb-4 text-primary">Sign In Here</h4>
-            <form action="" method="POST">
+            <h4 class="mb-4 text-dark">Signup for account</h4>
+            <hr>
+            <form method="Post" action="">
+            <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Username</label>
+                    <input type="username" name="username" class="form-control border border-dark" id="exampleInputPassword1">
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control border border-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control border border-dark" id="exampleInputPassword1">
                 </div>
-                <!-- <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p> -->
                 <div class="d-grid">
-                    <button class="btn btn-primary" name="login" type="submit">Sign In</button>
+                    <button class="btn btn-dark" name="Register" type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-lg-6" id="SignIn">
+        <div class="bg-white">
+            <h4 class="mb-4 text-dark">Signin to account</h4>
+            <hr>
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control border border-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control border border-dark" id="exampleInputPassword1">
+                </div>
+                <!-- <p class="small"><a class="text-dark" href="forget-password.html">Forgot password?</a></p> -->
+                <div class="d-grid">
+                    <button class="btn btn-dark" name="login" type="submit">Sign In</button>
                 </div>
             </form>
             <div class="mt-3">
@@ -92,31 +129,11 @@ if (isset($_POST['login'])) {
     </div>
 
 
-    <div class="col-lg-6">
-        <div class="bg-white">
-            <h4 class="text-center mb-4 text-primary">Sign Up Here</h4>
-            <form method="Post" action="">
-            <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Username</label>
-                    <input type="username" name="username" class="form-control border border-primary" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
-                </div>
-                <div class="d-grid">
-                    <button class="btn btn-primary" name="Register" type="submit">Sign Up</button>
-                </div>
-            </form>
-        </div>
-    </div>
+
+
 </div>
 
 
-<p class="text-center"> <a href="../backend/index.php" class="text-primary fw-bold">Admin here</a></p>
+
 </body>
 </html>
