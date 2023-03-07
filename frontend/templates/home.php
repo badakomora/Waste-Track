@@ -37,48 +37,48 @@ header("refresh: 0, ../");
   
   <div class="col-4">
   <div class="card">
-      <img class="card-img-top" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-2.jpg" alt="Bologna">
+      <img class="card-img-top" src="https://oconnorscaseih.com.au/wp-content/uploads/Davimac_35t-tracks_blue_rear-300x300.jpg" alt="Bologna">
       <div class="card-body">
-        <h4 class="card-title">Bologna</h4>
-        <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-        <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        <a href="#" class="btn btn-danger">Read More</a>
+        <h4 class="card-title">Track 1</h4>
+        <h6 class="card-subtitle mb-2">Lorem ipsum 1</h6>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam? </p>
+        <a href="#" class="btn btn-warning">Read More</a>
         <a href="#" class="btn btn-primary">Order Track</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted text-success">Ready to order</small>
       </div>
     </div>
   </div>
 
   <div class="col-4">
   <div class="card">
-      <img class="card-img-top" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-2.jpg" alt="Bologna">
+      <img class="card-img-top" src="https://www.waringa.com.au/wp-content/uploads/elementor/thumbs/Elmers-Haulmaster-Adjustable-Auger-scaled-phjhc4a6g0t4ze54mrwfxkh4s39k5gr27syerp5j8g.jpg" alt="Bologna">
       <div class="card-body">
-        <h4 class="card-title">Bologna</h4>
-        <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-        <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        <a href="#" class="btn btn-danger">Read More</a>
-        <a href="#" class="btn btn-primary">Order Track</a>
+        <h4 class="card-title">Track 2</h4>
+        <h6 class="card-subtitle mb-2">Lorem ipsum 2</h6>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam? </p>
+        <a href="#" class="btn btn-warning">Read More</a>
+        <a href="#" class="btn btn-danger">Track ordered</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted text-danger">Ordered</small>
       </div>
     </div>
   </div>
 
   <div class="col-4">
   <div class="card">
-      <img class="card-img-top" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-2.jpg" alt="Bologna">
+      <img class="card-img-top" src="https://oconnorscaseih.com.au/wp-content/uploads/41T-Chaser-Bin-Unloading-1024x576-1-e1644273023967.jpg" alt="Bologna">
       <div class="card-body">
-        <h4 class="card-title">Bologna</h4>
-        <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-        <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        <a href="#" class="btn btn-danger">Read More</a>
+        <h4 class="card-title">Track 3</h4>
+        <h6 class="card-subtitle mb-2">Lorem Ipsum 3</h6>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?</p>
+        <a href="#" class="btn btn-warning">Read More</a>
         <a href="#" class="btn btn-primary">Order Track</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted text-success">Ready to order</small>
       </div>
     </div>
   </div>
