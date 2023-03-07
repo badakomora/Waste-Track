@@ -65,11 +65,11 @@ if (isset($_POST['login'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
-<body >
+<body>
 
-<div class="container justify-content-center row mt-5 p-5">
-    <div class="col-6" id="SignIn">
-        <div class="border-primary bg-white">
+<div class="container justify-content-center row m-5 p-5">
+    <div class="col-lg-6" id="SignIn">
+        <div class="bg-white">
             <h4 class="text-center mb-4 text-primary">Sign In Here</h4>
             <form action="" method="POST">
                 <div class="mb-3">
@@ -93,7 +93,7 @@ if (isset($_POST['login'])) {
 
 
     <div class="col-6 ">
-        <div class="border-primary bg-white">
+        <div class="bg-white">
             <h4 class="text-center mb-4 text-primary">Sign Up Here</h4>
             <form method="Post" action="">
             <div class="mb-3">
