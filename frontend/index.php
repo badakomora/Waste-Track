@@ -92,7 +92,7 @@ if (isset($_POST['login'])) {
     </div>
 
 
-    <div class="col-6 ">
+    <div class="col-lg-6">
         <div class="bg-white">
             <h4 class="text-center mb-4 text-primary">Sign Up Here</h4>
             <form method="Post" action="">
