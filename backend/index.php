@@ -67,24 +67,24 @@ if (isset($_POST['login'])) {
 <body>
 
     <div class="vh-100 d-flex justify-content-center align-items-center" id="SignIn">
-        <div class="col-md-5 p-5 shadow-sm border rounded-5 border-secondary bg-white">
-            <h2 class="text-center mb-4 text-secondary">Sign In Form</h2>
+        <div class="col-md-5 p-5 shadow-sm">
+            <h2 class="text-center mb-4 text-primary">Sign In Form</h2>
             <form action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-secondary" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
                 </div>
-                <!-- <p class="small"><a class="text-secondary" href="forget-password.html">Forgot password?</a></p> -->
+                <!-- <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p> -->
                 <div class="d-grid">
-                    <button class="btn btn-secondary" name="login" type="submit">Sign In</button>
+                    <button class="btn btn-primary" name="login" type="submit">Sign In</button>
                 </div>
             </form>
             <div class="mt-3">
-                <!-- <p class="mb-0  text-center">Don't have an account? <a href="#SignUp" class="text-secondary fw-bold" >Sign
+                <!-- <p class="mb-0  text-center">Don't have an account? <a href="#SignUp" class="text-primary fw-bold" >Sign
                         Up</a></p> -->
             </div>
         </div>
@@ -92,28 +92,28 @@ if (isset($_POST['login'])) {
 
 
     <!-- <div class="vh-100 d-flex justify-content-center align-items-center" id="SignUp">
-        <div class="col-md-5 p-5 shadow-sm border rounded-5 border-secondary bg-white">
-            <h2 class="text-center mb-4 text-secondary">Sign Up Form</h2>
+        <div class="col-md-5 p-5 shadow-sm  bg-white">
+            <h2 class="text-center mb-4 text-primary">Sign Up Form</h2>
             <form method="Post" action="">
             <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Username</label>
-                    <input type="username" name="username" class="form-control border border-secondary" id="exampleInputPassword1">
+                    <input type="username" name="username" class="form-control border border-primary" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-secondary" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
                 </div>
-                <p class="small"><a class="text-secondary" href="forget-password.html">Forgot password?</a></p>
+                <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p>
                 <div class="d-grid">
-                    <button class="btn btn-secondary" name="Register" type="submit">Sign Up</button>
+                    <button class="btn btn-primary" name="Register" type="submit">Sign Up</button>
                 </div>
             </form>
             <div class="mt-3">
-                <p class="mb-0  text-center">Already have an account? <a href="#SignIn" class="text-secondary fw-bold">Sign
+                <p class="mb-0  text-center">Already have an account? <a href="#SignIn" class="text-primary fw-bold">Sign
                         In</a></p>
             </div>
         </div>
