@@ -37,7 +37,7 @@ header("refresh: 0, ../");
   
   <div class="col-4">
   <div class="card">
-      <img class="card-img-top" src="https://oconnorscaseih.com.au/wp-content/uploads/Davimac_35t-tracks_blue_rear-300x300.jpg" alt="Bologna">
+      <img class="card-img-top" src="http://cdn.justauto.com.au/ad-assets%2FJHFD4039486%2FJHFD4039486-1.jpg" alt="Bologna">
       <div class="card-body">
         <h4 class="card-title">Track 1</h4>
         <h6 class="card-subtitle mb-2">Lorem ipsum 1</h6>
@@ -46,7 +46,7 @@ header("refresh: 0, ../");
         <a href="#" class="btn btn-primary">Order Track</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted text-success">Ready to order</small>
+        <small class="text-success">Ready to order</small>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ header("refresh: 0, ../");
         <a href="#" class="btn btn-danger">Track ordered</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted text-danger">Ordered</small>
+        <small class="text-danger">Ordered</small>
       </div>
     </div>
   </div>
@@ -78,7 +78,7 @@ header("refresh: 0, ../");
         <a href="#" class="btn btn-primary">Order Track</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted text-success">Ready to order</small>
+        <small class="text-success">Ready to order</small>
       </div>
     </div>
   </div>
