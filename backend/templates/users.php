@@ -39,6 +39,7 @@
                     </form>
                     <td>
                         <form action="../../includes/forms/delete.php" method="post">
+                            <input type="hidden" name="eid" value="<?php echo $row['email'] ?>">
                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                             <button type="submit" class="btn btn-danger" name="deleteuser">Delete</button>
                         </form>

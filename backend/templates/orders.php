@@ -30,7 +30,7 @@
                 <tr>
                     <form action="../../includes/forms/edit.php" method="post">
                         <td scope="row"><?php echo $count; ?></td>
-                        <td><input type="text" name="id" value="<?php echo $row['trackid']; ?>"></td>
+                        <td><?php echo $row['trackid']; ?></td>
                         <?php
                         $query1 = mysqli_query($con, "SELECT * FROM tracks where id = '".$row['trackid']."'");
                         while ($row1 = mysqli_fetch_array($query1)) {
@@ -39,21 +39,21 @@
                         <?php } ?>
                         <td><?php echo $row['orderedby'] ?></td>
                         <td>
-                            <select name="status" id="">
-                                <option class="bg-warning" value="<?php echo $row['status']; ?>"><?php echo $row['status']; ?></option>
-                                <option value="Approve">Approve</option>
-                                <option value="Decline">Decline</option>
+                            <select name="status">
+                                <option class="bg-warning" value="<?php echo $row['status']; ?>">Current status: <?php echo $row['status']; ?></option>
+                                <option class="bg-success" value="Order Approved. Team will arrive soon.">Approve order</option>
+                                <option class="bg-danger" value="Order Declined. Find a different track.">Decline order</option>
                             </select>
                         </td>
                         <td>
                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                            <button class="btn btn-warning" type="submit" name="edituser">Edit</button>
+                            <button class="btn btn-warning" type="submit" name="editorder">Edit</button>
                         </td>
                     </form>
                     <td>
                         <form action="../../includes/forms/delete.php" method="post">
                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                            <button type="submit" class="btn btn-danger" name="deleteuser">Delete</button>
+                            <button type="submit" class="btn btn-danger" name="deleteorder">Delete</button>
                         </form>
                     </td>
                 </tr>

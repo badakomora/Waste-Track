@@ -3,55 +3,37 @@ include '../dbconfiq.php';
 if(isset($_POST['deleteuser'])){
 
     $uid = $_POST['id'];
-    $query1 = mysqli_query($con, "DELETE FROM users WHERE id = '$uid'");
-    if($query1){
-        mysqli_query($con, "DELETE FROM posts WHERE id = '$uid'");
-        mysqli_query($con, "DELETE FROM comments WHERE id = '$uid'");
+    $eid = $_POST['eid'];
+    mysqli_query($con, "DELETE FROM users WHERE id = '$uid'");
+    mysqli_query($con, "DELETE FROM orders WHERE orderedby = '$eid'");
         $msg = "User records deleted successfully!";
         echo "<script type='text/javascript'>
         alert('$msg');
         window.location = '../../backend/templates/users.php';
         </script>";
-    }
 
 }
-if(isset($_POST['deletepost'])){
+if(isset($_POST['deletetrack'])){
 
     $uid = $_POST['id'];
-    $query1 = mysqli_query($con, "DELETE FROM posts WHERE id = '$uid'");
+    $query1 = mysqli_query($con, "DELETE FROM tracks WHERE id = '$uid'");
     if($query1){
-    mysqli_query($con, "DELETE FROM comments WHERE id = '$uid'");
-    $msg = "Post records deleted successfully!";
+    $msg = "Track records deleted successfully!";
     echo "<script type='text/javascript'>
     alert('$msg');
-    window.location = '../../backend/templates/posts.php';
+    window.location = '../../backend/templates/tracks.php';
     </script>";
     }
 
 }
-if(isset($_POST['deletecomment'])){
+if(isset($_POST['deleteorder'])){
 
     $uid = $_POST['id'];
-    mysqli_query($con, "DELETE FROM comments WHERE id = '$uid'");
-    $msg = "Comment records deleted successfully!";
+    mysqli_query($con, "DELETE FROM orders WHERE id = '$uid'");
+    $msg = "Order records deleted successfully!";
     echo "<script type='text/javascript'>
     alert('$msg');
-    window.location = '../../backend/templates/comments.php';
+    window.location = '../../backend/templates/orders.php';
     </script>";
 
 }
-
-if(isset($_GET['pid'])){
-
-    mysqli_query($con, "DELETE FROM posts WHERE id = '".$_GET['pid']."'");
-    $msg = "Post records deleted successfully!";
-    echo "<script type='text/javascript'>
-    alert('$msg');
-    window.location = '../../frontend/templates/home.php';
-    </script>";
-
-}
-
-
-
-?>

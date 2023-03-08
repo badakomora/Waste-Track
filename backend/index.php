@@ -66,12 +66,13 @@ if (isset($_POST['login'])) {
 <body>
 
     <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-white shadow sticky-top">
-        <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management System</b></a>
+        <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management System</b></a>\
+        <p class="mb-0"><a href="../frontend/" class="text-dark fw-bold">Go back</a></p>
     </nav>
 
     <div class="vh-100 d-flex justify-content-center align-items-center" id="SignIn">
         <div class="col-md-5 p-5 shadow-sm">
-            <h2 class="mb-4 text-dark">Admin Signin</h2>
+            <h2 class="mb-4 text-dark">Admin Signin Only</h2>
             <form action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -86,9 +87,6 @@ if (isset($_POST['login'])) {
                     <button class="btn btn-dark" name="login" type="submit">Sign In</button>
                 </div>
             </form>
-            <div class="mt-3">
-                <p class="mb-0  text-center"><a href="../frontend/" class="text-dark fw-bold">Go back</a></p>
-            </div>
         </div>
     </div>
 

@@ -42,7 +42,7 @@ include '../../includes/dbconfiq.php';
 
   <div class="col-4">
   <div class="card">
-      <img class="card-img-top" src="<?php echo $row['file']?>" alt="Bologna">
+      <img class="card-img-top" src="../../includes/forms/img/<?php echo $row['file']; ?>" alt="Bologna">
       <div class="card-body">
         <h4 class="card-title"><?php echo $row['name']?></h4>
         <h6 class="card-subtitle mb-2">Track Id: #111<?php echo $row['id']?></h6>
