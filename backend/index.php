@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $row = mysqli_fetch_assoc($query);
 
     if ($row >= 1) {
-        
+
         if (password_verify($password, $row['password'])) {
 
             $_SESSION['user_id'] = $row['id'];
@@ -25,7 +25,6 @@ if (isset($_POST['login'])) {
             $msg = "Login Access Denied. Please use the correct credentials";
             echo "<script type='text/javascript'>alert('$msg');</script>";
         }
-
     } else {
 
         header('refresh: 0, ./');
@@ -66,9 +65,9 @@ if (isset($_POST['login'])) {
 
 <body>
 
-<nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-white shadow sticky-top">
-    <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management  System</b></a>
-</nav>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-white shadow sticky-top">
+        <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management System</b></a>
+    </nav>
 
     <div class="vh-100 d-flex justify-content-center align-items-center" id="SignIn">
         <div class="col-md-5 p-5 shadow-sm">
@@ -88,7 +87,7 @@ if (isset($_POST['login'])) {
                 </div>
             </form>
             <div class="mt-3">
-                <p class="mb-0  text-center"><a href="../frontend/" class="text-dark fw-bold" >Go back</a></p>
+                <p class="mb-0  text-center"><a href="../frontend/" class="text-dark fw-bold">Go back</a></p>
             </div>
         </div>
     </div>

@@ -30,7 +30,7 @@
                 <tr>
                     <form action="../../includes/forms/edit.php" method="post">
                         <td scope="row"><?php echo $count; ?></td>
-                        <td><input type="text" name="id" value="<?php echo $row['id']; ?>"></td>
+                        <td><input type="text" name="id" value="<?php echo $row['trackid']; ?>"></td>
                         <?php
                         $query1 = mysqli_query($con, "SELECT * FROM tracks where id = '".$row['trackid']."'");
                         while ($row1 = mysqli_fetch_array($query1)) {

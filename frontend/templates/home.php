@@ -18,9 +18,10 @@ header("refresh: 0, ../");
 <body>
 
 <nav class="navbar navbar-expand-lg  navbar-light bg-white shadow d-flex justify-content-between sticky-top">
-    <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management  System</b></a>
+    <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management System</b></a>
     <form class="form-inline">
         <div class="input-group mt-3"> 
+            <p><a class="text-dark m-3 " href="./home.php">Dashboard</a></p>
             <p><a class="text-dark m-3 " href="orders.php">My Orders</a></p>
             <p><a class="text-dark m-3" href="../../includes/logout.php">Log Out</a></p>
         </div>
