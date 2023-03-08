@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2023 at 03:34 PM
+-- Generation Time: Mar 08, 2023 at 06:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -54,13 +54,6 @@ CREATE TABLE `orders` (
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `orderedby`, `trackid`, `status`) VALUES
-(1, 'badakomora06@gmail.com', 1, 'Pending...');
-
 -- --------------------------------------------------------
 
 --
@@ -71,18 +64,17 @@ CREATE TABLE `tracks` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `descr` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL
+  `file` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tracks`
 --
 
-INSERT INTO `tracks` (`id`, `name`, `descr`, `file`, `status`) VALUES
-(1, 'Track 1', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?', 'http://cdn.justauto.com.au/ad-assets%2FJHFD4039486%2FJHFD4039486-1.jpg', 'unordered.'),
-(2, 'Track 2', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?', 'https://www.waringa.com.au/wp-content/uploads/elementor/thumbs/Elmers-Haulmaster-Adjustable-Auger-scaled-phjhc4a6g0t4ze54mrwfxkh4s39k5gr27syerp5j8g.jpg', 'Ordered.'),
-(3, 'Track 3', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?', 'https://oconnorscaseih.com.au/wp-content/uploads/41T-Chaser-Bin-Unloading-1024x576-1-e1644273023967.jpg', 'Ordered.');
+INSERT INTO `tracks` (`id`, `name`, `descr`, `file`) VALUES
+(1, 'Track 13', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?', 'http://cdn.justauto.com.au/ad-assets%2FJHFD4039486%2FJHFD4039486-1.jpg'),
+(2, 'Track 2', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?', 'https://www.waringa.com.au/wp-content/uploads/elementor/thumbs/Elmers-Haulmaster-Adjustable-Auger-scaled-phjhc4a6g0t4ze54mrwfxkh4s39k5gr27syerp5j8g.jpg'),
+(3, 'Track 3', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, consequatur labore alias animi nihil odio expedita delectus ipsa eos dolorum obcaecati excepturi vero reiciendis dolor quaerat enim aperiam fugit laboriosam?', 'https://oconnorscaseih.com.au/wp-content/uploads/41T-Chaser-Bin-Unloading-1024x576-1-e1644273023967.jpg');
 
 -- --------------------------------------------------------
 
@@ -97,14 +89,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `profile` varchar(255) NOT NULL DEFAULT 'avator.jpg'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `profile`) VALUES
-(1, 'Bada', 'badakomora06@gmail.com', '$2y$10$WxIgjbFe.5CZvGorH44xGOU9DCh5QxdNf9R3mo2xf2mB.qdVR41dS', 'avator.jpg'),
-(2, 'Ndondu', 'ndondugrace88@gmail.com', '$2y$10$9BdFnIYdIUv9EpD4N4jSqu5ehr9Hg/o4UdOl4sW.CzHNMjaI/W9FG', 'avator.jpg');
 
 --
 -- Indexes for dumped tables
@@ -136,7 +120,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tracks`
@@ -148,7 +132,7 @@ ALTER TABLE `tracks`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
