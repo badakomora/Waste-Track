@@ -69,7 +69,7 @@ if (isset($_POST['login'])) {
 
 <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-light bg-white shadow sticky-top">
     <a href="#" class="navbar-brand text-dark" style="font-size: 30px;"><b>Waste Track Management  System</b></a>
-    <p> <a href="../backend/index.php" class="text-dark fw-bold">Admin here</a></p>
+    <!-- <p> <a href="../backend/index.php" class="text-dark fw-bold">Admin here</a></p> -->
 </nav>
 
 <div class="container justify-content-center row m-5 p-5">
