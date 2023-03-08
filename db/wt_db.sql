@@ -59,9 +59,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `orderedby`, `trackid`, `status`) VALUES
-(1, 'badakomora06@gmail.com', 1, 'Pending...'),
-(2, 'badakomora06@gmail.com', 2, 'Pending...'),
-(4, 'ndondugrace88@gmail.com', 3, 'Pending...');
+(1, 'badakomora06@gmail.com', 1, 'Pending...');
 
 -- --------------------------------------------------------
 
